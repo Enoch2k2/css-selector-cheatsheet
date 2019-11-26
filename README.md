@@ -97,7 +97,13 @@ How can we make sure only to grab this specific h1? We can use a child selector 
 div#main-content h1
 ```
 
-Notice the space after `div#main-content`. This is us saying we want to go into the `div#main-content` and grab the `h1` inside.
+Notice the space after `div#main-content`. This is us saying we want to go into the `div#main-content` and grab the `h1` inside. There is no limit as how far you can go nested. Example:
+
+```
+ div#main-content div.product-desc h1.header.title
+```
+
+This would be us saying go into `div#main-content`, access every `div.product-desc` and access every `h1.header.title` in each of the `div.product-desc`. For scraping this would be bad. We would have an array of elements with our titles. However we'd most likely just want `div.product-desc` if it contains information for each one of our products.
 
 ## Scraping
 

@@ -71,6 +71,34 @@ And we used this selector:
 
 We would end up selecting both the h1 and the p elements. Be cautious and be specific with your selectors.
 
+One addition to class selectors, if we have elements with multiple classes that we want to select:
+```
+<p class="content main-content">This is a p element with two classes</p>
+```
+
+We can be even more specific by chaining with our selectors
+```
+p.content.main-content
+```
+
+This is saying that we want the p element with the class of content and the class of main-content.
+
+## Nested Elements
+
+What if we want an h1 inside specific divs. The divs might have an id, however the h1 may not. On top of this, we don't want every h1 in the document. For example:
+```
+<div id="main-content">
+  <h1>Welcome to the page!</h1>
+</div>
+```
+
+How can we make sure only to grab this specific h1? We can use a child selector like:
+```
+div#main-content h1
+```
+
+Notice the space after `div#main-content`. This is us saying we want to go into the `div#main-content` and grab the `h1` inside.
+
 ## Scraping
 
 A pro tip while scraping, when first selecting the elements you are wanting to scrape. Make sure that each element you are scraping contains all the information you want. So if you want a name / blend of coffee and maybe a link for more details. Then grab the element that contains that information. If you do it correctly, you'll have an array elements and each element will have the information inside. That will allow you to iterate through the data and create your objects based on that data.

@@ -26,15 +26,15 @@ If we have an element like:
 <p id="greeting">Hello!</p>
 ```
 
-Since it has an id attributes, we can grab it with the id selector:
+Since it has an id attribute, we can grab it with the id selector:
 ```
 #greeting
 
 or we can combine it with an element selector
 
-h2#greeting 
+p#greeting 
 
-this will give us an h2 with the id of greeting
+this will give us a p element with the id of greeting
 ```
 
 ## The class selector
